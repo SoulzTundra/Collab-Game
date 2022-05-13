@@ -1,0 +1,3 @@
+Go To > Window/Rendering/Lighting
+and then choose the Skybox Material you want in Environment section 
+that is all!
