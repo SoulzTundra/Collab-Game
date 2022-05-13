@@ -14,7 +14,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Collider2D m_CrouchDisableCollider;
 	[SerializeField] private float movementSpeed;
 
-	const float k_GroundedRadius = .6f;
+	const float k_GroundedRadius = .1f;
 	private bool m_Grounded;
 	const float k_CeilingRadius = .2f;
 	private Rigidbody2D m_Rigidbody2D;
