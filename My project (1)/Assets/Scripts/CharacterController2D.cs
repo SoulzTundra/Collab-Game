@@ -14,7 +14,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Collider2D m_CrouchDisableCollider;
 	[SerializeField] private float movementSpeed;
 
-	const float k_GroundedRadius = .1f;
+	const float k_GroundedRadius = .09f;
 	private bool m_Grounded;
 	const float k_CeilingRadius = .2f;
 	private Rigidbody2D m_Rigidbody2D;
@@ -32,9 +32,14 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+	private Animator animator;
+
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
+
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
@@ -115,6 +120,16 @@ public class CharacterController2D : MonoBehaviour
 		{
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+		}
+
+		if (m_Grounded)
+		{
+			animator.SetBool("Grounded", true);
+		}
+
+		if (!m_Grounded) 
+		{ 
+		animator.SetBool("Jump", false);
 		}
 	}
 

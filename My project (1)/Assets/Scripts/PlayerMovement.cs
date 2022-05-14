@@ -11,10 +11,16 @@ public class PlayerMovement : MonoBehaviour
 
     public float horizontalMove = 0f;
     private bool jump = false;
+
+    private Animator animator;
+
+    private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,10 +28,23 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        if(horizontalMove > 0f || horizontalMove < 0f)
+        {
+            animator.SetInteger("AnimState", 1);
+        }
+        else
+        {
+            animator.SetInteger("AnimState", 2);
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
+            animator.SetBool("Jump", true);
             jump = true;
         }
+        
+
+
     }
 
     private void FixedUpdate()
