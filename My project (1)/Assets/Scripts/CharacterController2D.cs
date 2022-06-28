@@ -15,7 +15,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private float movementSpeed;
 
 	const float k_GroundedRadius = .09f;
-	private bool m_Grounded;
+	public bool m_Grounded;
 	const float k_CeilingRadius = .2f;
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;

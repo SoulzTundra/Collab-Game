@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DustAnimations : MonoBehaviour
+public class DustAnimation : MonoBehaviour
 {
     private Animator animator;
-    private Rigidbody2D rb;
+    public PlayerMovement playerMovement;
+
     void Start()
     {
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if(rb.velocity.x > 0 || rb.velocity.x < 0)
+        if (playerMovement.moving == true)
         {
             animator.SetBool("running", true);
         }

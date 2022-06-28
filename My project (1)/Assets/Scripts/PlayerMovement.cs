@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     private Rigidbody rb;
+    public bool moving = false;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +34,15 @@ public class PlayerMovement : MonoBehaviour
         if(horizontalMove > 0f || horizontalMove < 0f)
         {
             animator.SetInteger("AnimState", 1);
+            moving = true;
         }
         else
         {
             animator.SetInteger("AnimState", 2);
+            moving = false;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && controller.m_Grounded)
         {
             animator.SetBool("Jump", true);
             jump = true;
