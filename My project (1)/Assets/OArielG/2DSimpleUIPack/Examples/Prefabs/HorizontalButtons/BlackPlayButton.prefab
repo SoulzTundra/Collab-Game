@@ -171,7 +171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 14.6}
+  m_AnchoredPosition: {x: 2.3, y: 15.9}
   m_SizeDelta: {x: 48, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4576356616482503181
@@ -389,9 +389,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1475287968149445440, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475287968149445443, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1475287968149445443, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
       propertyPath: m_ClearFlags
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1475287968149445443, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
       propertyPath: orthographic
@@ -400,6 +408,18 @@ PrefabInstance:
     - target: {fileID: 1475287968149445443, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
       propertyPath: orthographic size
       value: 32.077866
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475287968149445443, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475287968149445443, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475287968149445443, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.31764707
       objectReference: {fileID: 0}
     - target: {fileID: 1475287968149445564, guid: 3041e70bc1fd7c848b467d293f0f7767, type: 3}
       propertyPath: m_RootOrder
